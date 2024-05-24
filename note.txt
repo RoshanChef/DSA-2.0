@@ -1,0 +1,8 @@
+diff 
+1. char fn and string fn
+
+3. stable and unstable
+4. inorder or not ? 
+5. cutom dilimiter
+6. time and space complexity 
+
