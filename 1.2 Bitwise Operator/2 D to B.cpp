@@ -2,16 +2,18 @@
 #include <cmath>
 using namespace std;
 // Decimal to binary convert
+// 2 => 101
+
 int Dec_Bin(int num)
 {
    int ans = 0;
    int i = 0;
    while (num)
    {
-      int bit = num % 2 ;
+      int bit = num & 1;
       ans = ans + bit * pow(10, i);
-      num = num>>1; 
-      i++; 
+      num = num >> 1;
+      i++;
    }
    return ans;
 }
