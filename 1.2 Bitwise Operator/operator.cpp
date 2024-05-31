@@ -3,6 +3,7 @@ using namespace std;
 
 int main()
 {
+    // Product - Sum 
     int a = 452, sum = 0, product = 1;
     while (a != 0)
     {
