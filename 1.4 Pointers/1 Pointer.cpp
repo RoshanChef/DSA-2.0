@@ -7,6 +7,8 @@ int main()
 {
     int num = 5;
 
+    // A pointer is a variable that stores the memory address of another variable as its value.
+
     // Datatype *ptr_var_name;
     int *p = &num;
 

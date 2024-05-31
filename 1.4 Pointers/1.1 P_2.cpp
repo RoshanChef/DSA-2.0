@@ -3,19 +3,19 @@ using namespace std;
 
 int main()
 {
-    // int num = 2;
-    // int *ptr = &num;
+    int num = 2;
+    int *ptr = &num;
 
     // stores an address
     // // Datatype * pointerName
 
     // // *ptr == num
-    // *ptr = *ptr + 1;
-    // cout << num << endl;
+    *ptr = *ptr + 1;
+    cout << num << endl;
 
-    // cout << ptr << endl;
-    // ptr = ptr + 1;
-    // cout << ptr << endl;
+    cout << "Pointer " << ptr << endl;
+    ptr = ptr + 1;
+    cout << "Pointer " << ptr << endl;
 
     // // types
 
@@ -57,18 +57,15 @@ int main()
 
     void *pr = &i;
     cout << *(int *)pr << endl;
+    
     pr = &d;
     cout << *(double *)pr << endl;
     pr = &f;
     cout << *(float *)pr << endl;
 
-
     char ch = 'A';
     char *pt = &ch;
     cout << pt << endl;
-    int i = 10;
-
-
 
     return 0;
 }
