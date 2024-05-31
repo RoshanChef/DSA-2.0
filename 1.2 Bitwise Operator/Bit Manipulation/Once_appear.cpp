@@ -24,7 +24,8 @@ vector<int> onece_appear(int *arr, int len)
     }
 
     int xr1 = 0, xr2 = 0;
-    // O(N)
+
+    // O(N) partitions
     for (int i = 0; i < len; i++)
     {
         // set
@@ -43,10 +44,11 @@ vector<int> onece_appear(int *arr, int len)
     ans.push_back(xr1);
     return ans;
 }
+
 int main()
 {
 
-    int arr[] = {1, 4, 2, 1, 5, 2, 4, 7};
+    int arr[] = {1, 4, 2, 1, 5, 2, 4, 6};
     int len = sizeof(arr) / sizeof(int);
     vector<int> one = onece_appear(arr, len);
 
