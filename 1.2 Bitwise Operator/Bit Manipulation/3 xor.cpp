@@ -14,7 +14,7 @@ int xor_n(int n)
 
 int main()
 {
-    // //unique from pair of numbers
+    // // ********* 1. unique from pair of numbers
     // int ar[]={2,1,2,5,7,5,6,7,6};
     // int len = sizeof(ar)/sizeof(int),ans = 0;
     // for (int i = 0; i < len; i++)
@@ -23,7 +23,7 @@ int main()
     // }
     // cout<<"anser is : "<<ans;
 
-    // //swapping
+    // // *********** 2  swapping
     // cout << "before : a -> " << a << "            b -> " << b << endl;
     // int a = 5, b = 7;
     // a = a ^ b;
@@ -39,7 +39,7 @@ int main()
     // a = a - b;
     // cout << "after : a -> " << a << "            b -> " << b << endl;
 
-    // //xor from (1,n)
+    // // ************* 3. or from (1,n)
     // int n, ans = 0;
     // cout << "enter the num ";
     // cin >> n;
@@ -54,7 +54,7 @@ int main()
     // // theta(1)
     // cout << xor_n(n);
 
-    //  // xor bw (L , R)
+    //  // ******************* 4. xor bw (L , R)
     int l, r;
     int ans = 0;
     cout << "enter the range start  , end : ";
