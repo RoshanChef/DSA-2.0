@@ -6,8 +6,8 @@ using namespace std;
 int main()
 {
     int num = 5;
-    
-    // datatype *ptr_var_name;
+
+    // Datatype *ptr_var_name;
     int *p = &num;
 
     double *d = NULL;
@@ -38,13 +38,13 @@ int main()
 
     cout << endl;
     cout << q << endl;
-    
-    //both different ..
-    // cout << *q++ << endl;
 
-    cout<<num<<endl;
+    // both different ..
+    //  cout << *q++ << endl;
+
+    cout << num << endl;
     cout << (*q)++ << endl;
-    cout<<num<<endl;
+    cout << num << endl;
     cout << q << endl;
 
     return 0;
