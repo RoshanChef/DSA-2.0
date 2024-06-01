@@ -23,6 +23,12 @@ using namespace std;
     }
 
 int main(){
+    
+    long long arr[]= {1,4,2,3,4,1};
+    
+    vector<int> ans = duplicates(arr , 6); 
+
+    for(int val:ans){   cout<<val<<" ";  }
 
 return 0;
 }
