@@ -3,6 +3,7 @@
 
 using namespace std; 
 
+// O(N)
 void rev(vector<int> &arr){
     int s , e; 
     s = 0 ; 

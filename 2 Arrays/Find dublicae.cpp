@@ -29,7 +29,6 @@ int main()
     long long arr[] = {1, 41, 2, 3, 41, 1, 41};
 
     vector<int> ans = duplicates(arr, 6);
-
     for (int val : ans)
     {
         cout << val << " ";
