@@ -5,6 +5,8 @@ void update(int *p)
 {
     // p = p + 1;
     *p = *p + 1;
+    p = p + 1;
+    cout << "Pointer " << p << endl;
 }
 
 // int get_sum(int arr[], int n)
@@ -16,7 +18,7 @@ int get_sum(int *arr, int n)
     {
         sum += arr[i];
     }
-
+    arr = 0;
     return sum;
 }
 

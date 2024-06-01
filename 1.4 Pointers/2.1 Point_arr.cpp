@@ -10,15 +10,15 @@ int main()
 
     //&arr enitre array
 
-    // cout << "first .. \n\t" << arr << endl;
+    cout << "first .. \n\t" << arr << endl;
     // cout << endl;
     // cout << arr + 1 << endl;
-    // cout << (&arr) + 1 << endl;
+    // cout << "contains .. " << (&arr) + 1 << endl;
     // cout << &arr[0] + 1 << endl;
 
-    // cout << *(&arr) << endl;
-    // cout << *(arr + 2) << endl;
-    // cout << *arr + 1 << endl;
+    cout << *(&arr) << endl;
+    cout << *(arr + 2) << endl;
+    cout << *arr + 1 << endl;
 
     // arr[i] = *(arr + i)
     // i[arr] = *(i + arr)
@@ -41,8 +41,8 @@ int main()
     int ar[4] = {0};
     // int *p = ar;
 
-    //not allowed
-    int *p = &ar; 
+    // not allowed
+    //  int * p = &ar;
 
     cout << "\n==== end ====";
     return 0;
