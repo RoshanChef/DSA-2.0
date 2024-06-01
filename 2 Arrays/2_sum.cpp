@@ -3,6 +3,7 @@ using namespace std;
 
 vector<int> twoSum(vector<int> &ar, int target)
 {
+	// track the indexes
 	unordered_map<int, int> mp;
 	for (int i = 0; i < ar.size(); i++)
 		mp[ar[i]] = i;

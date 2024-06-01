@@ -1,4 +1,5 @@
 #include <bits/stdc++.h>
+using namespace std;
 /*
 
 Given an array nums, return true if the array was originally sorted in non-decreasing order, then rotated some number of positions (including zero). Otherwise, return false.
@@ -27,9 +28,12 @@ bool check(vector<int> &n)
         return 0;
     return 1;
 }
-using namespace std;
+
 int main()
 {
+    vector<int> v = {3, 4, 5, 1, 2};
+    cout << check(v) << endl;
 
+    
     return 0;
 }
