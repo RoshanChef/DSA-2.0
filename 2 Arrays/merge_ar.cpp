@@ -1,6 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+// O(m+n)
 void merge(int a1[], int a2[], int b[] , int a1Len , int a2Len , int bLen)
 {
 

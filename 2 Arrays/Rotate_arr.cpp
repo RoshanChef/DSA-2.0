@@ -24,24 +24,25 @@ vector<int> rotateArray(vector<int> arr, int k)
         ans[(i - k + len) % len] = arr[i];
     }
 
-/*
-    TC = O(len)
-    SC =  O(len)
-*/
+    /*
+        TC = O(len)
+        SC =  O(len)
+    */
     return ans;
 }
 
 int main()
 {
-    vector<int> v  = {1,2,3,4,5};
+    vector<int> v = {1, 2, 3, 4, 5};
 
-    vector<int> rotate(v.size()) = rotateArray(v,3);
+    vector<int> rotate = rotateArray(v, 1);
 
-    //print
-    for(int val:rotate){
-        cout<<val<<" ";
+    // print
+    for (int val : rotate)
+    {
+        cout << val << " ";
     }
-    cout<<endl;
-    
+    cout << endl;
+
     return 0;
 }
