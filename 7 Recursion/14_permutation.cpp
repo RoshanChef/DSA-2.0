@@ -26,7 +26,7 @@ vector<vector<int>> permutation(vector<int> arr, int len)
 int main()
 {
    vector<int> arr = {1,2, 3};
-   vector<vector<int>> ans = permutation(arr, 3);
+   vector<vector<int>> ans = permutation(arr, arr.size());
 
    for (auto val : ans)
    {

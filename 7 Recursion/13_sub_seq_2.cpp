@@ -1,14 +1,23 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+//  *****************
+//  __  __  __  
+//   2   1   0
+// 
+//  *****************
+
+
 vector<vector<int>> sub_seq(int arr[], int len)
 {
    vector<vector<int>> ans;
    int limit = (1 << len) - 1;
 
+   
    for (int num = 0; num <= limit; num++)
    {
       vector<int> output;
+      //check set bit
       for (int i = 0; i < len; i++)
       {
          int bit = 1 << i;
