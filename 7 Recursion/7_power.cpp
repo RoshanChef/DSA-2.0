@@ -35,8 +35,7 @@ int Pow(int a, int b)
 
 int main()
 {
-
     cout << endl;
-    cout << Pow(2, 7);
+    cout << Pow(3,3);
     return 0;
 }
