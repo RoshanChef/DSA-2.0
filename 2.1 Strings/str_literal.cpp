@@ -3,32 +3,31 @@ using namespace std;
 
 int main()
 {
-    char p[5] = "john";
+    char p[5] = "John";
     char *ptr = p;
     cout << (ptr + 1) << endl;
-    cout << p;
+    cout << p << endl;
 
     // roshan store in unknown memory area and return only address
-    char *str = "roshan";
-    str = "new string";
+    char str[] = "Roshan";
+    // str = "new string";
     cout << str << endl;
 
-    // pointers play ..
+    // // pointers play ..
 
-    string name = "roshan";
-    cout << name << endl;
-    name = "kalmathe";
-    cout << name << endl;
+    // string name = "Krishan";
+    // cout << name << endl;
+    // name = "kalmathe";
+    // cout << name << endl;
 
-    char *s = "hello";
-    cout << s << endl;
-    s = "world";
-    cout << s << endl;
+    // char *s = "hello";
+    // cout << s << endl;
+    // s = "world";
+    // cout << s << endl;
 
-    char ch[5] = "jojo";
-    char *pal = &ch[0];
-    cout << pal << endl;
-
+    // char ch[5] = "jojo";
+    // char *pal = &ch[0];
+    // cout << pal << endl;
 
     return 0;
 }

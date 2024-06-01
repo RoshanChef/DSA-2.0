@@ -43,9 +43,9 @@ int main()
     cout << "Enter name " << endl;
     cin >> name;
 
-    // name[2] = '\n';
+    name[2] = '\n';
     // cout<<name[5]<<endl;
-    // cout<<"Your name is "<<name<<endl;
+    cout << "Your name is " << name << endl;
     cout << "Length is " << getLen(name) << endl;
     cout << "Revese is " << rev(name, getLen(name)) << endl;
     cout << "main is " << name << endl;
