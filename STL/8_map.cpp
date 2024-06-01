@@ -14,6 +14,11 @@ int main()
     // another way ..
     m.insert({5, "Bheem"});
 
+    map<int , int> mp = {{0,2}, {1,4} , {2,6}};
+    for(auto val : mp){
+            cout<<val.first<<" - " <<val.second << endl;
+    }
+
     cout << "Keys are " << endl;
     for (auto val : m)
     {
