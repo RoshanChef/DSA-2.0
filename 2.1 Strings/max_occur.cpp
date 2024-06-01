@@ -11,7 +11,7 @@ int main()
         m[s[i]]++;
     }
 
-    int mx = INT_MIN;
+    int mx = 0;
     char max = 0;
     for (auto key : m)
     {

@@ -6,8 +6,8 @@ int main()
 {
     // string s = "na\0me";
     // char ch[10] = "rosh\0an";
-    // //   ch[2] = '\0';
-    // cout << s << endl;
+    //  ch[2] = '\0';
+    // // cout << s << endl;
     // cout << ch << endl;
 
     // cout << s.length() << endl;
@@ -17,8 +17,8 @@ int main()
     // cout << s << endl;
 
     // ************************    functions     **********************
-    // string name ;
-    // cin>>name;
+    string name ;
+    cin>>name;
     // getline(cin, name);
     // cout<<name<<endl;
 
