@@ -16,7 +16,7 @@ void word_rev(string &words)
 
     for (int i = 0; i <= len; i++)
     {
-        if (int(words[i]) == 32 || words[i] == '\0')
+        if (int(words[i]) == ' ' || words[i] == '\0')
         {
             rev(words, track, si - 1);
             track = i + 1;

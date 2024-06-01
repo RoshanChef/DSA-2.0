@@ -1,12 +1,9 @@
-#include <iostream>
-#include <algorithm>
+#include<iostream>
 using namespace std;
+
 
 int main()
 {
-    string name = "Roshan Kalmathe";
-    cout<<name<<endl;
 
-    cout << "=== end ===" << endl;
-    return 0;
+ return 0;
 }

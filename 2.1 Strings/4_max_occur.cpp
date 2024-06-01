@@ -4,6 +4,7 @@ using namespace std;
 int main()
 {
     string s = "testoooo";
+    // o => 4
     map<char, int> m;
 
     for (int i = 0; i < s.length(); i++)
