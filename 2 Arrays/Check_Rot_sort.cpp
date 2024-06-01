@@ -34,6 +34,5 @@ int main()
     vector<int> v = {3, 4, 5, 1, 2};
     cout << check(v) << endl;
 
-    
     return 0;
 }
