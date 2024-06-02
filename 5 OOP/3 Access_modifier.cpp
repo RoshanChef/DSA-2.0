@@ -3,7 +3,6 @@ using namespace std;
 class Animal
 {
     int weight; 
-
 public:
     string type; 
     int age ; 
