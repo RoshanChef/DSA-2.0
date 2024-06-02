@@ -1,41 +1,26 @@
 #include <iostream>
-#define pi int(5.5)
 using namespace std;
 
-class human
+bool prime(int n)
 {
-
-    int age;
-    string name="";
-
-public:
-    void set(int age) { this->age = age; }
-    int get() { return this->age; }
-
-    human(int age)
+    if (n == 2 || n == 1 || n == 0)
+        return 1;
+    for (int i = 3; i < n; i++)
     {
-        this->age = age;
-        cout << "Parameter constructor" << endl;
+        if (n % i == 0)
+            return 0;
     }
-    human(int age, string name)
-    {
-        this->age = age;
-        this->name = name;
-    }
-    void print(){
-        cout<<"Age := " <<age << " - Name : " << name<<endl;
-    }
-    ~human()
-    {
-        cout << "Destructor\n";
-    }
-};
+    return 1;
+}
 
 int main()
 {
-    human o(10);
-    human *obj = new human(45);
-    obj->print(); 
+    int n;
+    cin >> n;
+    if (prime(n))
+        cout << "it is prime" << endl;
+    else
+        cout << "it is not prime" << endl;
 
     return 0;
 }

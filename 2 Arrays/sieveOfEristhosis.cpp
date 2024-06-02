@@ -23,6 +23,9 @@ void NumPrime(int number)
     cout << "Total prime number is : " << count << endl;
 }
 
+// TC  O(nloglogn) 
+// SC  O(prime_number)
+
 int main()
 {
 
