@@ -4,7 +4,7 @@ using namespace std;
 class Mathametics
 {
 public:
-    // function overloading ..
+    // function overloading ..(name and return type must be same)
     int sum(int a, int b)
     {
         cout << "First " << endl;
@@ -38,8 +38,8 @@ class param
 {
 public:
     int value;
-    // operator overloading .. 
-                        //Reference var otherwise loop 
+    // operator overloading ..
+    // Reference var otherwise loop
     void operator+(param &a)
     {
         cout << this->value - a.value << endl;

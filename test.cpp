@@ -1,17 +1,26 @@
 #include <iostream>
 using namespace std;
 
-class val
+class a
 {
 public:
-    int a, b;
-    val(int fir, int sec) : a(fir), b(sec*fir) {}
+    int val = 0;
+    int operator<<(a &obj)
+    {
+        cout << "value " << this->val << endl;
+        return obj.val + this->val;
+    }
 };
+
 int main()
 {
-    val obj(10, 20);
-    cout << obj.a << endl;
-    cout << obj.b << endl;
+    a obj1;
+    obj1.val = 10;
+
+    a obj2;
+    obj2.val = 20;
+
+    cout << (obj1 << obj2) << endl;
 
     return 0;
 }
