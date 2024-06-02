@@ -24,11 +24,13 @@ int abc::b;
 int main()
 {
     abc obj1, obj2;
-    obj1.a = 10, obj1.b = 20;
+    obj1.a = 10;
+    obj1.b = 20;
     obj1.print();
 
     // change in obj2
-    obj2.a = 30, obj2.b = 40;
+    obj2.a = 30;
+    obj2.b = 40;
     obj1.print();
     obj2.print();
 
