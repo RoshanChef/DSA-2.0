@@ -81,6 +81,7 @@ int main()
 
     // Manually Destuctor by Delete
     delete ptr;
+    
     cout << "\n==== end ====";
     return 0;
 }

@@ -9,8 +9,8 @@ public:
     void setWeight(int weight)
     {
         // this => pointer to the current object
-        //  this->weight = weight;
         (*this).weight = weight;
+        //  this->weight = weight;
     }
     int getWeight()
     {
@@ -24,9 +24,8 @@ int main()
     Animal rohan;
     rohan.type = "Lion";
     rohan.setWeight(120);
-    cout << rohan.getWeight()<<endl;
-    cout<<rohan.type<<endl;
-
+    cout << rohan.getWeight() << endl;
+    cout << rohan.type << endl;
 
     return 0;
 }

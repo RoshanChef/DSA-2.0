@@ -1,20 +1,33 @@
-#include<iostream>
+#include <iostream>
 #define pi int(5.5)
 using namespace std;
 
-class human{
-//data member 
-int age = 13; 
-int value = 10; 
-//member functions
-    void hello(){
-        cout<<"say hello to all " <<endl;
+class human
+{
+
+    int age;
+
+public:
+    void set(int age) { this->age = age; }
+    int get() { return this->age; }
+
+    human(int age)
+    {
+        this->age = age;
+        cout << "Parameter constructor" << endl;
+    }
+    ~human()
+    {
+        cout << "Destructor\n";
     }
 };
 
 int main()
 {
-    human manoj; 
+    human o(10);
+    human *obj = new human(45);
+
     
- return 0;
+
+    return 0;
 }
