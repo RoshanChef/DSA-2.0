@@ -18,6 +18,8 @@ void selectionSort(vector<int>& arr, int n)
   }
 
 }
+// TC O(N2)
+// SC O(1)
 
 int main()
 {

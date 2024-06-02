@@ -20,10 +20,18 @@ void bubbleSort(vector<int> &arr, int n)
             break;
     }
 }
+// TC =>  best case => O(N)
+//             AC , WC => O(N*N)
+// SC =>  O(1)
 
 int main()
 {
-    vector<int> arr = {12, 4  , 7, 10};
-    
+    vector<int> arr = {12, 4, 7, 10};
+    bubbleSort(arr, arr.size());
+    for (int val : arr)
+    {
+        cout << val << " ";
+    }
+
     return 0;
 }
