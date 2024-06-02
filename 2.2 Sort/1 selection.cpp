@@ -1,7 +1,7 @@
 #include<iostream>
+#include<vector> 
 using namespace std;
 
-#include <bits/stdc++.h> 
 void selectionSort(vector<int>& arr, int n)
 {   
   for(int i = 0; i<n-1; i++){
@@ -21,6 +21,15 @@ void selectionSort(vector<int>& arr, int n)
 
 int main()
 {
+  vector<int> ar = {3,5,1,7,9}; 
+  
+  //sort
+  selectionSort(ar , ar.size()); 
+  
+  //print
+  for(int val : ar){
+    cout<<val<<" ";
+  }
     
  return 0;
 }
