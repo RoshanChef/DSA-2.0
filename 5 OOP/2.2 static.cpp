@@ -9,7 +9,7 @@ public:
 
     static void print()
     {
-        // no this pointer passes
+        // no this pointer passes1
         // all member must be static
         cout << "a => " << a << " b => " << b << endl;
 
