@@ -34,7 +34,6 @@ public:
 class BoxFactory
 {
     int cnt;
-
 public:
     BoxFactory() { this->cnt = 0; }
     Box getBox(int w)

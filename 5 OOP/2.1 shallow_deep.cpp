@@ -9,7 +9,7 @@ class box
 {
 public:
     int x, *y;
-    box(int x, int y) : x(x), y(new int[y]) {}
+    box(int _x, int _y) : x(_x), y(new int[_y]) {}
 
     void print() const
     {
@@ -53,9 +53,6 @@ int main()
 
     // cout << "\nb print " << endl;
     // b.print();
-
-
-
 
     // //Deep copy
     // box c = {2, 30};
