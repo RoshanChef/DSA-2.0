@@ -9,7 +9,7 @@ class box
 {
 public:
     int x, *y;
-    box(int _x, int _y) : x(_x), y(new int[_y]) {}
+    box(int _x, int _y) : x(_x), y(new int(_y)) {}
 
     void print() const
     {
@@ -39,7 +39,7 @@ public:
 int main()
 {
     // // Shallow copy
-    // box a(1, 20);
+    box a(1, 20);
     // box b(a);
     // // box b = a;
     // a.print();
