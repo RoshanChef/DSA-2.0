@@ -19,6 +19,8 @@ public:
     animal(int _a, int _b, int _c) : a(_a), b(_b), c(_c) {}
 };
 
+// Private constructor Use :: 
+// Don't made the direct object of class 
 class Box
 {
     int width;
