@@ -9,7 +9,7 @@ int main()
     priority_queue<int> maxi;
 
     //  //min heap ..
-    // priority_queue<int, vector<int>, greater<int>> mini;
+    priority_queue<int, vector<int>, greater<int>> mini;
 
     maxi.push(1);
     maxi.push(3);
@@ -17,7 +17,7 @@ int main()
     maxi.push(0);
 
     int len = maxi.size();
-    cout << "is empty ? " << maxi.empty() << endl;
+    cout << "Is empty ? " << maxi.empty() << endl;
 
     for (int i = 0; i < len; i++)
     {
@@ -26,7 +26,7 @@ int main()
     }
     cout << endl;
 
-    cout << "is empty ? " << maxi.empty() << endl;
+    cout << "Is empty ? " << maxi.empty() << endl;
 
     return 0;
 }
