@@ -65,11 +65,11 @@ int main()
     cout << "enter the number ";
     cin >> n;
 
-    // cout << brute_sq(n) << endl;
+    cout << brute_sq(n) << endl;
 
-    cout << sq(n) << endl;
-    int precision = 4;
-    cout << "Answer with precision " << sqrtPre(sq(n), precision, n) << endl;
+    // cout << sq(n) << endl;
+    // int precision = 4;
+    // cout << "Answer with precision " << sqrtPre(sq(n), precision, n) << endl;
 
     return 0;
 }
