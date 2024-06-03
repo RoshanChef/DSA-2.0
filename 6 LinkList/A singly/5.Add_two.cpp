@@ -51,6 +51,7 @@ void insertionAtLast(node *&head, int data)
     node *n = new node(data);
     temp->next = n;
 }
+
 void revese(node *&head)
 {
 
@@ -69,6 +70,7 @@ void revese(node *&head)
     }
     head = prev;
 }
+
 node *add(node *first, node *second)
 {
     int carry = 0;
@@ -101,13 +103,10 @@ node *add(node *first, node *second)
 node *add_two(node *a, node *b)
 {
     if (a == 0)
-    {
         return b;
-    }
     if (b == 0)
-    {
         return a;
-    }
+        
     revese(a);
     revese(b);
     node *c = add(a, b);

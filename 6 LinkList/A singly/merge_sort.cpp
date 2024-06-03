@@ -63,6 +63,7 @@ node *middle(node *head)
     }
     return slow;
 }
+
 node *solve(node *&first, node *&sec)
 {
     if (first->next == 0)
@@ -100,6 +101,7 @@ node *solve(node *&first, node *&sec)
     }
     return first;
 }
+
 node *merge(node *&left, node *&right)
 {
     if (left == 0)
