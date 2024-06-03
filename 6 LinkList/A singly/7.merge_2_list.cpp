@@ -67,7 +67,9 @@ node *merge(node *head1, node *head2)
     }
     if (head2 == 0)
         return head1;
+
     node *head3 = nullptr, *tail = nullptr;
+    
     // ele in h1 and h2
     while (head1 != 0 && head2 != 0)
     {
