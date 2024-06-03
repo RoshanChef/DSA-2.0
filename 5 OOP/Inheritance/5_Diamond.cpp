@@ -8,7 +8,8 @@ public:
 };
 
 class b :virtual public a{  }; 
-class c :virtual public a{  }; 
+class c :virtual public a{  
+}; 
 
 class d : public b , public c{  
     
