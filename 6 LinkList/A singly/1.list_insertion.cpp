@@ -120,7 +120,7 @@ int len(node *&head)
     }
     return cnt;
 }
-
+//  O(N)
 void print(node *&head)
 {
     node *temp = head;

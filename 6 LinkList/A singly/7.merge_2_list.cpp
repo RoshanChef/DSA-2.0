@@ -22,6 +22,7 @@ public:
     }
 };
 
+//  O(N)
 void print(node *head)
 {
     if (head == 0)
@@ -40,7 +41,7 @@ void print(node *head)
     cout << endl;
 }
 
-// At last
+// At last O(N)
 void insertionAtLast(node *&head, int d)
 {
     if (head == 0)
@@ -116,6 +117,7 @@ node *merge(node *head1, node *head2)
 
     return head3;
 }
+
 node *solve(node *first, node *second)
 {
     if (first->next == 0)

@@ -100,6 +100,7 @@ node *add(node *first, node *second)
     return ans;
 }
 
+// O(m+n)
 node *add_two(node *a, node *b)
 {
     if (a == 0)
