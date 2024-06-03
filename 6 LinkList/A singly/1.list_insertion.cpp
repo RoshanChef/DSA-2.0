@@ -34,6 +34,11 @@ void insertionAtHead(node *&head, int d)
 // At last
 void insertionAtLast(node *&head, int d)
 {
+    if (head == 0)
+    {
+        head = new node(d);
+        return;
+    }
     node *temp = head;
     while (temp->next != nullptr)
     {
@@ -94,7 +99,7 @@ void insertAtPos(node *&head, int data, int pos, node *&tail)
 //         cnt++;
 //         temp = temp->next;
 //     }
-//     if(tail->next == nullptr) {  return insertionAtLastTail(data, tail); }
+//     if(temp->next == nullptr) {  return insertionAtLastTail(data, tail); }
 //     node *n = new node(data);
 //     n->next = temp->next;
 //     temp->next = n;

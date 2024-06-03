@@ -39,7 +39,7 @@ void insertionAtLast(node *&head, int d)
     }
 
     node *temp = head;
-    while (temp->next != nullptr)
+    while (temp->next != 0)
     {
         temp = temp->next;
     }
