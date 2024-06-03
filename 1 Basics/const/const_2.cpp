@@ -16,7 +16,7 @@ public:
     //  }
 
     // solutions
-    animal(int a, int b, int c) : a(a), b(b), c(c) {}
+    animal(int _a, int _b, int _c) : a(_a), b(_b), c(_c) {}
 };
 
 class Box
