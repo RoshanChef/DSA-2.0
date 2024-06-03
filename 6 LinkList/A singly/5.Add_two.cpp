@@ -106,9 +106,10 @@ node *add_two(node *a, node *b)
         return b;
     if (b == 0)
         return a;
-        
+
     revese(a);
     revese(b);
+    
     node *c = add(a, b);
 
     revese(a);
