@@ -20,13 +20,13 @@ int main()
     // name = "kalmathe";
     // cout << name << endl;
 
-    // char *s = "hello";
+    // const char *s = "hello";
     // cout << s << endl;
     // s = "world";
     // cout << s << endl;
 
     // char ch[5] = "jojo";
-    // char *pal = &ch[0];
+    // const char *pal = &ch[0];
     // cout << pal << endl;
 
     return 0;
