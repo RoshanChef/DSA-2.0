@@ -1,10 +1,11 @@
 #include <iostream>
+#include <vector>
 using namespace std;
 
-int Peaks_moutain(int arr[], int len)
+int Peaks_moutain(vector<int> &arr)
 {
     int low = 0;
-    int high = len - 1;
+    int high = arr.size() - 1;
 
     while (low < high)
     {
@@ -26,8 +27,10 @@ int Peaks_moutain(int arr[], int len)
 
 int main()
 {
-    int arr[5] = {4, 5, 6, 21, 1};
-    cout << Peaks_moutain(arr, 5) << endl;
+    vector<int> v = {5, 9, 17, 16, 12, 3, 2};
+    // peak index
+    cout << "Index : " << Peaks_moutain(v) << endl;
+    cout << v[Peaks_moutain(v)] << endl;
 
     return 0;
 }

@@ -20,14 +20,15 @@ int pivot(int arr[], int n)
             high = mid;
         }
     }
-    return low;
+    return low - 1;
 }
 
 int main()
 {
-    //rotated sorted array
+    // rotated sorted array
     int arr[5] = {3, 8, 10, 13, 3};
     cout << pivot(arr, 5) << endl;
+    cout << arr[pivot(arr, 5)] << endl;
 
     return 0;
 }
