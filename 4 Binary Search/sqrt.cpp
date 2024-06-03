@@ -16,6 +16,7 @@ int brute_sq(int num)
     }
     return -1;
 }
+
 int sq(int num)
 {
     int low = 0, high = num;
@@ -41,6 +42,7 @@ int sq(int num)
     }
     return ans;
 }
+
 double sqrtPre(int num, int precesion, int target)
 {
 
