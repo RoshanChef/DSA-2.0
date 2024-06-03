@@ -18,7 +18,7 @@ public:
     }
 };
 
-// At head
+// At head O(1)
 void insertionAtHead(node *&head, int d)
 {
     if (head == 0)
@@ -31,7 +31,7 @@ void insertionAtHead(node *&head, int d)
     head = temp;
 }
 
-// At last
+// At last  O(N)
 void insertionAtLast(node *&head, int d)
 {
     if (head == 0)
@@ -48,7 +48,7 @@ void insertionAtLast(node *&head, int d)
     temp->next = n;
 }
 
-// using tail
+// using tail  O(1)
 void insertionAtLastTail(int d, node *&tail)
 {
     node *temp = new node(d);
@@ -56,7 +56,7 @@ void insertionAtLastTail(int d, node *&tail)
     tail = temp;
 }
 
-// At position with help of friend
+// At position with help of friend  O(N)
 void insertAtPos(node *&head, int data, int pos, node *&tail)
 {
     if (pos == 1)
