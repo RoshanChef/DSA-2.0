@@ -52,7 +52,7 @@ void print(node *&head)
     cout << endl;
 }
 
-//simple
+// simple
 void reverse(node *&head)
 {
     if (head->next == 0 || head == 0)
@@ -70,6 +70,7 @@ void reverse(node *&head)
     }
     head = back;
 }
+
 // Approch 1
 void recurRev1(node *&head, node *back)
 {
@@ -96,7 +97,7 @@ node *recurRev2(node *head)
     // base case
     if (head->next == nullptr)
         return head;
-        
+
     // recursive call
     node *smallHead = recurRev2(head->next);
 
@@ -105,7 +106,6 @@ node *recurRev2(node *head)
     head->next = nullptr;
     return smallHead;
 }
-
 
 int main()
 {
