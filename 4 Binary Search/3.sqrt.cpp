@@ -19,6 +19,11 @@ int brute_sq(int num)
 
 int sq(int num)
 {
+    if (num < 0)
+    {
+        return -1;
+    }
+
     int low = 0, high = num;
     int ans = -1;
     while (low <= high)
@@ -43,7 +48,7 @@ int sq(int num)
     return ans;
 }
 
-double sqrtPre(int num, int precesion, int target)
+double sqrtPre(int num, int precesion, int n)
 {
 
     double ans = num;
@@ -51,7 +56,7 @@ double sqrtPre(int num, int precesion, int target)
     for (int i = 0; i < precesion; i++)
     {
         fact /= 10;
-        for (double j = ans; j * j <= target; j += fact)
+        for (double j = ans; j * j <= n; j += fact)
         {
             ans = j;
         }
@@ -65,11 +70,11 @@ int main()
     cout << "enter the number ";
     cin >> n;
 
-    cout << brute_sq(n) << endl;
+    // cout << brute_sq(n) << endl;
 
     // cout << sq(n) << endl;
-    // int precision = 4;
-    // cout << "Answer with precision " << sqrtPre(sq(n), precision, n) << endl;
+    int precision = 4;
+    cout << "Answer with precision " << sqrtPre(sq(n), precision, n) << endl;
 
     return 0;
 }
