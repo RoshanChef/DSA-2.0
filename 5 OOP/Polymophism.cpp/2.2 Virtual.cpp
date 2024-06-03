@@ -17,7 +17,7 @@ public:
     {
         cout << "Human cons" << endl;
     }
-    void speak()
+    virtual void speak()
     {
         cout << "speaking .. " << endl;
     }
@@ -42,6 +42,7 @@ public:
     void hello()
     {
         cout << "hello good morning " << endl;
+        // Human::speak(); 
     }
     ~Dog()
     {
@@ -52,8 +53,8 @@ public:
 int main()
 {
     // //static
-    // Dog obj;
-    // obj.speak();
+    Dog obj;
+    obj.hello();
 
     // Human a;
     // a.speak();
@@ -65,16 +66,16 @@ int main()
     // Dog *dg = new Dog();
     // dg->speak();
 
-    // without virtul keyword left
+    // ************** without virtul keyword left
 
-    // UpCasting
+    // // UpCasting
     // Human *pg = new Dog();
     // pg->speak();
 
     // // error
     // //  Dog *dg = new Human();
 
-    // UpCasting
+    // // UpCasting
     // Dog *dg = (Dog *)new Human();
     // dg->speak();
 
@@ -94,7 +95,7 @@ int main()
 
     // Dog *dg2 = (Dog *)new Human();
 
-    // // if virtual dctor not there then dog never delete 
+    // // if virtual dctor not there then dog never delete
     // Human *a = new Dog;
     // delete a;
 
