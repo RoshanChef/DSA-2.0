@@ -21,6 +21,11 @@ public:
 // At head
 void insertionAtHead(node *&head, int d)
 {
+    if (head == 0)
+    {
+        head = new node(d);
+        return;
+    }
     node *temp = new node(d);
     temp->next = head;
     head = temp;

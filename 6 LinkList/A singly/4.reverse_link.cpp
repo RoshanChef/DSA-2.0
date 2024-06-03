@@ -8,12 +8,12 @@ public:
     node()
     {
         this->data = 0;
-        this->next = nullptr;
+        this->next = 0;
     }
     node(int data)
     {
         this->data = data;
-        this->next = nullptr;
+        this->next = 0;
     }
 };
 // At last
@@ -27,7 +27,7 @@ void insertionAtLast(node *&head, int d)
     }
 
     node *temp = head;
-    while (temp->next != nullptr)
+    while (temp->next != 0)
     {
         temp = temp->next;
     }
@@ -44,7 +44,7 @@ void print(node *&head)
     }
 
     node *temp = head;
-    while (temp != nullptr)
+    while (temp != 0)
     {
         cout << temp->data << " ";
         temp = temp->next;
