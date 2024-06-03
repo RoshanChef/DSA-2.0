@@ -42,7 +42,7 @@ public:
     void hello()
     {
         cout << "hello good morning " << endl;
-        // Human::speak(); 
+        // Human::speak();
     }
     ~Dog()
     {
@@ -53,8 +53,8 @@ public:
 int main()
 {
     // //static
-    Dog obj;
-    obj.hello();
+    // Dog obj;
+    // obj.hello();
 
     // Human a;
     // a.speak();
@@ -73,13 +73,13 @@ int main()
     // pg->speak();
 
     // // error
-    // //  Dog *dg = new Human();
+    //  Dog *dg = new Human();
 
     // // UpCasting
     // Dog *dg = (Dog *)new Human();
     // dg->speak();
 
-    // with virtul keyword right
+    //  ************** with virtul keyword right
 
     // Human *hm = new Dog();
     // hm->speak();
