@@ -9,7 +9,7 @@ class box
 {
 public:
     int x, *y;
-    box(int x, int y) : x(x), y(new int(y)) {}
+    box(int x, int y) : x(x), y(new int[y]) {}
 
     void print() const
     {

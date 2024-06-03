@@ -4,6 +4,7 @@ using namespace std;
 class abc
 {
     mutable int x;
+    // int x;
     int *y;
 
 public:
@@ -38,18 +39,18 @@ void cons(const abc &a)
 
 int main()
 {
-    // int *a = new int(23);
+    // int *a = new int[23];
     // cout << *a << endl;
 
-    // // const int *p = new int(867); // const data , non-const pointer
-    // int const *p = new int(867);
+    // // const int *p = new int[867]; // const data , non-const pointer
+    // int const *p = new int[867]; // const data , non-const pointer
     // cout << *p << endl;
 
     // // //error
     // // *p  = 34;
 
     // // delete heap memory
-    // delete p;
+    // delete[] p;
 
     // int data = 12;
     // p = &data;
@@ -74,7 +75,7 @@ int main()
 
     abc obj;
     cout << obj.getX() << endl;
-    cout<<obj.decode()<<endl;
+    cout << obj.decode() << endl;
     cons(obj);
 
     return 0;

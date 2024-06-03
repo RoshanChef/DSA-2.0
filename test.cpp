@@ -1,10 +1,9 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
-
-
 int main()
 {
-  const  char * p = "roshan klamath"; 
-    cout<<p<<endl;
- return 0;
+    int *const p = new int[10];
+    
+
+    return 0;
 }
