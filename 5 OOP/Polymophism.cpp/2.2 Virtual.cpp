@@ -5,7 +5,7 @@ using namespace std;
 /*
 // virtual keyword
  -way of achieve runtime polymorphism
- -At compile time static table create(virtual table)
+ -At compile time and after the construction static table create(virtual table)
   contains fn ptr and if inheritance apply then virtual table for all child class
   -compiler add vptr(Always point to vrt table) in virtual fn class
 */
