@@ -70,10 +70,12 @@ node *rev_K(node *head, int k)
         prev = cur;
         cur = next;
         cnt++;
+        // cout<<cur->data<<endl;
     }
     if (cur != 0)
     {
-        head->next = rev_K(cur, k);
+        // head->next = rev_K(cur, k);      //first k and after reverse
+        head->next =cur; 
     }
 
     return prev;
@@ -81,7 +83,7 @@ node *rev_K(node *head, int k)
 
 int main()
 {
-    // First K element reverse 
+    // First K element reverse
     node *head = new node(10);
     print(head);
 
@@ -93,8 +95,9 @@ int main()
     print(head);
 
     cout << "\nk reverse " << endl;
-    head = rev_K(head, 5);
+    head = rev_K(head, 4);
     print(head);
 
+    cout<<"\n ==== end ==== "<<endl;
     return 0;
 }
