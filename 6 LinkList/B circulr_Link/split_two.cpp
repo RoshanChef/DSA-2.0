@@ -72,6 +72,7 @@ void print(node *tail)
     } while (temp != tail);
     cout << endl;
 }
+
 vector<node *> split_2(node *tail)
 {
     node *head = tail->next;
@@ -106,7 +107,7 @@ int main()
 {
     node *tail = 0;
     insertion(tail, 10, 0);
-    print(tail);
+    // print(tail);
     insertion(tail, 20, 10);
     insertion(tail, 30, 20);
     insertion(tail, 40, 30);
