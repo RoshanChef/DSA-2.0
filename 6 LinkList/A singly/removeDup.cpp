@@ -112,6 +112,7 @@ void removeDb(node *head)
     node *cur = head;
     while (cur != 0)
     {
+        //visited
         if (visit[cur->value] != 0)
         {
             node *temp = cur;
@@ -121,6 +122,7 @@ void removeDb(node *head)
         }
         else
         {
+            //not visited 
             visit[cur->value]++;
             prev = cur;
             cur = cur->next;
