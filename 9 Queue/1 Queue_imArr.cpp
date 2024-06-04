@@ -2,7 +2,6 @@
 using namespace std;
 class Queue
 {
-    int data;
     int *arr;
     int front, rear;
     int size;
@@ -12,7 +11,6 @@ public:
     {
         arr = new int(size);
         this->size = size;
-        data = 0;
         front = -1;
         rear = -1;
     }
