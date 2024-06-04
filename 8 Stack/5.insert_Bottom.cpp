@@ -15,6 +15,18 @@ void insertBottom(stack<int> &s, int data)
     s.push(val);
 }
 
+void print(stack<int> &s)
+{
+    if (s.empty())
+        return;
+    int val = s.top();
+    cout << val << " ";\
+
+    s.pop();
+    print(s);
+    s.push(val);
+}
+
 int main()
 {
     stack<int> s;

@@ -48,7 +48,17 @@ void reverse_2(stack<int> &s)
     // insertbottom
     insert_Bottom(s, val);
 }
+void print(stack<int> &s)
+{
+    if (s.empty())
+        return;
+    int val = s.top();
+    cout << val << " ";\
 
+    s.pop();
+    print(s);
+    s.push(val);
+}
 int main()
 {
     stack<int> s;
@@ -61,11 +71,6 @@ int main()
     revese(s);
     // reverse_2(s);
 
-    while (s.size())
-    {
-        int val = s.top();
-        cout << val << " ";
-        s.pop();
-    }
+
     return 0;
 }
