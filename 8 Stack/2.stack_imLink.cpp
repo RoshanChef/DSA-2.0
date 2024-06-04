@@ -30,7 +30,7 @@ public:
         stack *temp = head;
         head = head->next;
         int val = temp->data;
-        // delete temp;
+        delete temp;
         return val;
     }
 
