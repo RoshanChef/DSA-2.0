@@ -135,6 +135,14 @@ void sort_(node *&head)
     twoTail->next = 0;
     head = zeroHead->next;
 
+    zeroTail = 0;
+    oneTail = 0;
+    twoTail = 0;
+
+    delete zeroTail;
+    delete oneTail;
+    delete twoTail;
+
     delete zeroHead;
     delete oneHead;
     delete twoHead;
