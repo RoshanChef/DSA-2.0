@@ -141,10 +141,14 @@ int main()
     insertion(head, 40);
     insertion(head, 40);
     insertion(head, 50);
+
+    //print
     print(head);
 
-    cout << head->next->value << endl;
+    //remove
     removeDb(head);
+
+    //print
     print(head);
 
     return 0;
