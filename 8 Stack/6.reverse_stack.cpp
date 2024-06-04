@@ -31,6 +31,7 @@ void insert_Bottom(stack<int> &s, int data)
     insert_Bottom(s, data);
     s.push(val);
 }
+
 // Approach 2
 void reverse_2(stack<int> &s)
 {
@@ -57,8 +58,8 @@ int main()
     s.push(4);
     s.push(5);
 
-    // revese(s);
-    reverse_2(s);
+    revese(s);
+    // reverse_2(s);
 
     while (s.size())
     {
