@@ -9,16 +9,21 @@ void solve(queue<int> &q, int k)
     int val = q.front();
     q.pop();
 
-    reverse_k(q, k - 1);
+    solve(q, k - 1);
 
     q.push(val);
 }
 void reverse_k(queue<int> &q, int k)
 {
     solve(q, k);
-    int len = q.size() - len; 
-    
-    
+    int len = q.size() - k;
+    while (len)
+    {
+        int val = q.front();
+        q.pop();
+        q.push(val);
+        len--;
+    }
 }
 
 void print(queue<int> &q)
