@@ -2,7 +2,6 @@
 using namespace std;
 class node
 {
-
 public:
     int value;
     node *next;
@@ -27,7 +26,6 @@ public:
         cout << "memory delete is " << val << endl;
     }
 };
-
 
 void insertion(node *&tail, int data, int ele)
 {
@@ -138,6 +136,6 @@ int main()
     deletionNode(tail, 15);
     print(tail);
 
-    cout << "\n=====================";
+    cout << "\n ==== END ==== ";
     return 0;
 }
