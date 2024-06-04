@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-// Approach 1
+// Approach 1 O(N*N)
 void next_smaller(int *arr, int *ans, int len)
 {
     for (int i = 0; i < len; i++)
@@ -18,12 +18,14 @@ void next_smaller(int *arr, int *ans, int len)
             ans[i] = min;
     }
 }
+
 // Approach 2
 void nx_smaller(int *ar, int *ans, int len)
 {
     stack<int> stack;
-    len--;
     stack.push(-1);
+    len--;
+    
     for (int i = len; i >= 0; i--)
     {
         int cur = ar[i];
