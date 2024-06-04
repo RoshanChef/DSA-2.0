@@ -45,7 +45,7 @@ public:
     }
     bool isEmpty()
     {
-        if(top >= 0)
+        if (top >= 0)
         {
             return false;
         }
