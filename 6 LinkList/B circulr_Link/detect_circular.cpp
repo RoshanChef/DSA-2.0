@@ -212,8 +212,7 @@ int main()
     // cout << is_circular_2(0) << endl;
     if (floyd_start(head))
     {
-        cout << "Is cycle ? ";
-        cout << "yes " << endl;
+        cout << "Is cycle ? " << "yes " << endl;
     }
     else
     {
