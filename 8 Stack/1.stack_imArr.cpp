@@ -7,12 +7,14 @@ class stack
     int *arr;
 
 public:
+
     stack(int size)
     {
         this->size = size;
         arr = new int[size];
         top = -1;
     }
+
     void push(int value)
     {
         if (this->top == (this->size - 1))
@@ -22,6 +24,7 @@ public:
         }
         arr[++top] = value;
     }
+
     void pop()
     {
         int val = arr[top];
@@ -43,6 +46,7 @@ public:
     {
         return top + 1;
     }
+
     bool isEmpty()
     {
         if (top >= 0)
