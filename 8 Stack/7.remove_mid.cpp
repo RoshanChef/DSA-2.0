@@ -5,17 +5,31 @@ void remove(stack<int> &s, int tar)
 {
     if (tar == 0)
     {
-        cout << "out " << s.top() << endl;
+        cout << "\nout " << s.top() << endl;
         s.pop();
         return;
     }
     int val = s.top();
     s.pop();
-    
-    //recursive
+
+    // recursive
     remove(s, --tar);
 
-    //backTrack
+    // backTrack
+    s.push(val);
+}
+void print(stack<int> &s)
+{
+    if (s.empty())
+        return;
+    int val = s.top();
+    cout << val << " ";
+
+    s.pop();
+
+    // print
+    print(s);
+
     s.push(val);
 }
 
@@ -24,20 +38,15 @@ int main()
     stack<int> s;
     s.push(1);
     s.push(2);
-    // s.push(3);
-    // s.push(4);
-    // s.push(5);
-    // s.push(6);
+    s.push(3);
+    s.push(4);
+    s.push(5);
+    s.push(6);
 
     int mid = s.size() >> 1;
+    print(s);
     remove(s, mid);
-
-    while (s.size())
-    {
-        int val = s.top();
-        s.pop();
-        cout << val << " ";
-    }
+    print(s);
 
     return 0;
 }
