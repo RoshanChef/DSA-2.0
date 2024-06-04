@@ -58,7 +58,7 @@ int getLen(node *head)
 }
 void insertionAtLast(node *&head, int data)
 {
-    if (head == nullptr)
+    if (head == 0)
     {
         node *temp = new node(data);
         head = temp;
@@ -66,7 +66,7 @@ void insertionAtLast(node *&head, int data)
     }
     // otherwise
     node *temp = head;
-    while (temp->next != nullptr)
+    while (temp->next != 0)
         temp = temp->next;
     node *n = new node(data);
     temp->next = n;
