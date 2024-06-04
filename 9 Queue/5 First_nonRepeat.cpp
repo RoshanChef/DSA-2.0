@@ -18,6 +18,7 @@ string first_nonRepeat(string &s)
         q.push(cur);
         while (!q.empty())
         {
+            // repeating 
             if (m[cur] > 1)
                 q.pop();
             else
