@@ -36,14 +36,16 @@ void print(queue<int> &q)
 {
     if (q.empty())
         return;
-    int val = q.front(); 
-    q.pop();
-
-    //print
-    cout<<val<<" ";
-    q.push(val); 
-    
-    print(q);
+    int len = q.size();
+    while (len)
+    {
+        int val = q.front(); 
+        cout<<val<<" ";
+        q.pop(); 
+        q.push(val); 
+        len--;
+    }
+    cout<<endl;
 }
 
 int main()
@@ -55,12 +57,12 @@ int main()
     q.push(40);
     cout << "Front " << q.front() << endl;
     cout << "Back " << q.back() << endl;
-
-
+    print(q);
     cout << "After reverse" << endl;
     reverse2(q);
     cout << "Front " << q.front() << endl;
     cout << "Back " << q.back() << endl;
+    print(q); 
 
     return 0;
 }
