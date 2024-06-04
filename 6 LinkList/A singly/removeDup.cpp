@@ -50,7 +50,7 @@ void insertion(node *&head, int data)
     temp->next = n;
 }
 
-// if ll sorted ..
+// if ll sorted .. O(N)
 void remove_dub(node *head)
 {
     while (head != 0)
@@ -67,7 +67,7 @@ void remove_dub(node *head)
 }
 
 // if ll not sorted ..
-// Appoarch 1
+// Appoarch 1 O(N*N)
 void remove_db(node *head)
 {
     if (head == 0)
@@ -142,13 +142,14 @@ int main()
     insertion(head, 40);
     insertion(head, 50);
 
-    //print
+    // print
     print(head);
 
-    //remove
-    removeDb(head);
+    // remove
+    //  removeDb(head);
+    remove_db(head);
 
-    //print
+    // print
     print(head);
 
     return 0;
