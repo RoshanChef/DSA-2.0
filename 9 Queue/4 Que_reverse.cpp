@@ -32,6 +32,19 @@ void reverse2(queue<int> &que)
     reverse2(que);
     que.push(val);
 }
+void print(queue<int> &q)
+{
+    if (q.empty())
+        return;
+    int val = q.front(); 
+    q.pop();
+
+    //print
+    cout<<val<<" ";
+    q.push(val); 
+    
+    print(q);
+}
 
 int main()
 {
@@ -42,6 +55,7 @@ int main()
     q.push(40);
     cout << "Front " << q.front() << endl;
     cout << "Back " << q.back() << endl;
+
 
     cout << "After reverse" << endl;
     reverse2(q);
