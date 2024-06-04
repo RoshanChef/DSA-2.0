@@ -32,6 +32,7 @@ void reverse2(queue<int> &que)
     reverse2(que);
     que.push(val);
 }
+
 void print(queue<int> &q)
 {
     if (q.empty())
