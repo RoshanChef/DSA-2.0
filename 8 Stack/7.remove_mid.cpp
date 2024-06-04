@@ -23,13 +23,10 @@ void print(stack<int> &s)
     if (s.empty())
         return;
     int val = s.top();
-    cout << val << " ";
+    cout << val << " ";\
 
     s.pop();
-
-    // print
     print(s);
-
     s.push(val);
 }
 
