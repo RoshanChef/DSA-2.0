@@ -13,6 +13,7 @@ void solve(queue<int> &q, int k)
 
     q.push(val);
 }
+
 void reverse_k(queue<int> &q, int k)
 {
     solve(q, k);

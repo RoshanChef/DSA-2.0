@@ -10,7 +10,7 @@ vector<int> firstNeg(vector<int> ar, int k)
     vector<int> ans;
     int i = 0, j = 0;
     queue<int> window;
-    
+
     while (j < ar.size())
     {
         // -ve
