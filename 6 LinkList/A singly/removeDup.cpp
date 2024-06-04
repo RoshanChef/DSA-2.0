@@ -33,6 +33,7 @@ void print(node *head)
     }
     cout << endl;
 }
+
 void insertion(node *&head, int data)
 {
     if (head == 0)
