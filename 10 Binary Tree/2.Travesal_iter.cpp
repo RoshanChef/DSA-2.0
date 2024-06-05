@@ -1,4 +1,4 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 class node
 {
@@ -134,48 +134,81 @@ void pre_order(node *root)
     cout << endl;
 }
 
-//App 2 
-void preOrder(node* root,vector<int>& v){
-    if (root == 0 )
+void post_Order(node *root, vector<int> &v)
+{
+    if (root == 0)
     {
-        return; 
+        return;
+    }
+    stack<node *> stack;
+
+    while (1)
+    {
+        // left
+        if (root != 0)
+        {
+            stack.push(root);
+            root = root->left;
+        }
+        else
+        {
+            // right
+            if (stack.empty())
+                break;
+
+            root = stack.top();
+            stack.pop(); 
+        }
+    }
+}
+
+// App 2
+void preOrder(node *root, vector<int> &v)
+{
+    if (root == 0)
+    {
+        return;
     }
 
-    stack<node*> stack; 
-    
+    stack<node *> stack;
+
     stack.push(root);
-    while(!stack.empty()){
-        node* temp = stack.top(); 
-        stack.pop(); 
+    while (!stack.empty())
+    {
+        node *temp = stack.top();
+        stack.pop();
         v.push_back(temp->data);
 
         if (temp->right)
         {
             stack.push(temp->right);
         }
-        if(temp->left){
-            if(stack.empty())
-                break; 
+        if (temp->left)
+        {
+            if (stack.empty())
+                break;
             stack.push(temp->left);
         }
     }
-
 }
 
-void postOrder(node* root , vector<int> &ans){
+void postOrder(node *root, vector<int> &ans)
+{
     if (root == 0)
     {
-        return; 
+        return;
     }
-    stack<node*> stack; 
+    stack<node *> stack;
     stack.push(root);
-    while(!stack.empty()){
-        node* temp = stack.top(); 
-        stack.pop(); 
+    while (!stack.empty())
+    {
+        node *temp = stack.top();
+        stack.pop();
         ans.push_back(temp->data);
 
-        if(temp->left){
-            stack.push(temp->left); 
+        if (temp->left)
+        {
+            stack.push(temp->left);
         }
         if (temp->right)
         {
@@ -184,7 +217,6 @@ void postOrder(node* root , vector<int> &ans){
     }
     reverse(ans.begin(), ans.end());
 }
-
 
 int main()
 {
@@ -204,22 +236,23 @@ int main()
     // cout << "Pre_order" << endl;
     // pre_order(root);
 
-    cout<<"PreOrder \n\t" ; 
-    vector<int> ans ;
+    cout << "PreOrder \n\t";
+    vector<int> ans;
     preOrder(root, ans);
-    for(int val : ans){
-        cout<<val <<" "; 
+    for (int val : ans)
+    {
+        cout << val << " ";
     }
-    cout <<endl; 
+    cout << endl;
 
     ans.clear();
- 
-    cout<<"Post Order \n\t" ; 
-    postOrder(root,ans);
-    for(int val : ans){
-        cout<<val <<" "; 
-    }
 
+    cout << "Post Order \n\t";
+    postOrder(root, ans);
+    for (int val : ans)
+    {
+        cout << val << " ";
+    }
 
     return 0;
 }
