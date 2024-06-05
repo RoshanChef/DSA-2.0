@@ -5,9 +5,9 @@ template <class T>
 class list
 {
     T data;
-    list<T> *next;
-    list<T> *tail;
-    list<T> *head;
+    list *next;
+    list *head;
+    list *tail;
 
 public:
     list()
