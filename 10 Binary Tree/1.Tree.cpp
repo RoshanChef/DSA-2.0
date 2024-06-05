@@ -136,8 +136,7 @@ int main()
          << "\t";
     preorder(root);
 
-    cout << "\nPost Order Traversal" << endl
-         << "\t";
+    cout << "\nPost Order Traversal" << endl<< "\t";
     postorder(root);
     cout << "\n=====" << endl;
     return 0;
