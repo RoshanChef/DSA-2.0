@@ -77,7 +77,7 @@ int main()
     l.push('E');
     l.print();
 
-    cout<<"size " << l.size()<<endl;
+    cout << "size " << l.size() << endl;
 
     return 0;
 }
