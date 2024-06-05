@@ -156,8 +156,12 @@ void post_Order(node *root, vector<int> &v)
             if (stack.empty())
                 break;
 
-            root = stack.top();
-            stack.pop(); 
+            root = root->right;
+            if (root->right == 0)
+            {
+                root = stack.top();
+                stack.pop();
+            }
         }
     }
 }
