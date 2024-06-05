@@ -101,7 +101,6 @@ void preorder(node *root)
 }
 
 // left right print
-
 void postorder(node *root)
 {
     if (root == 0)
