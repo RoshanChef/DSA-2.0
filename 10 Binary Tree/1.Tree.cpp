@@ -129,14 +129,17 @@ int main()
     cout << "Level Order Traversal" << endl;
     level_order(root);
 
-    cout << "In Order Traversal" << endl<< "\t";
+    cout << "In Order Traversal" << endl
+         << "\t";
     inorder(root);
 
-    cout << "\nPre Order Traversal" << endl<< "\t";
+    cout << "\nPre Order Traversal" << endl
+         << "\t";
     preorder(root);
 
-    cout << "\nPost Order Traversal" << endl<< "\t";
+    cout << "\nPost Order Traversal" << endl
+         << "\t";
     postorder(root);
-    cout<<"\n====="<<endl;
+    cout << "\n=====" << endl;
     return 0;
 }
