@@ -134,40 +134,6 @@ void pre_order(node *root)
     cout << endl;
 }
 
-void post_Order(node *root, vector<int> &v)
-{
-    if (root == 0)
-    {
-        return;
-    }
-    stack<node *> stack;
-
-    while (1)
-    {
-        // left
-        if (root != 0)
-        {
-            stack.push(root);
-            root = root->left;
-        }
-        else
-        {
-            // right
-            if (stack.empty())
-                break;
-
-            root = stack.top();
-            root = root->right;
-
-            if (root->right == 0)
-            {
-                root = stack.top();
-                stack.pop();
-            }
-        }
-    }
-}
-
 // App 2
 void preOrder(node *root, vector<int> &v)
 {
