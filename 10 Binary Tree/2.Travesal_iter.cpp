@@ -143,8 +143,8 @@ void preOrder(node *root, vector<int> &v)
     }
 
     stack<node *> stack;
-
     stack.push(root);
+
     while (!stack.empty())
     {
         node *temp = stack.top();
@@ -157,8 +157,6 @@ void preOrder(node *root, vector<int> &v)
         }
         if (temp->left)
         {
-            if (stack.empty())
-                break;
             stack.push(temp->left);
         }
     }
