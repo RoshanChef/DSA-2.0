@@ -26,6 +26,7 @@ void nx_smaller(int *ar, int *ans, int len)
     stack.push(-1);
     len--;
     
+    // right -> left
     for (int i = len; i >= 0; i--)
     {
         int cur = ar[i];
