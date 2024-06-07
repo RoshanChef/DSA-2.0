@@ -3,17 +3,21 @@ using namespace std;
 
 class node
 {
-
 public:
     int data;
-    node *right;
     node *left;
-
+    node *right;
+    node()
+    {
+        data = 0;
+        this->left = 0;
+        this->right = 0;
+    }
     node(int data)
     {
         this->data = data;
-        this->right = 0;
         this->left = 0;
+        this->right = 0;
     }
 };
 
@@ -77,31 +81,17 @@ void level_order(node *root)
     }
 }
 
-int number_node(node *root, int ans)
+int countNodes(node *root)
 {
     if (root == 0)
         return 0;
-    if (root->left == 0 && root->right == 0)
-        return 1;
-    // left
-    int left = number_node(root->left, ans);
 
-    // right
-    int right = number_node(root->right, ans);
-
+    int left = countNodes(root->left);
+    int right = countNodes(root->right);
     return left + right + 1;
-
 }
-
 int main()
 {
-
-    node *root = 0;
-
-    levelBuild(root);
-    level_order(root);
-
-    cout<<"total nodes is " << number_node(root , 0)<<endl;
 
     return 0;
 }
