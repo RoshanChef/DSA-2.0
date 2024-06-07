@@ -41,9 +41,9 @@ int min_valid(string &str)
             b++;
         stack.pop();
     }
-    
+
     a++, b++;
-    
+
     int ans = (a / 2) + (b / 2);
     return ans;
 }
