@@ -56,3 +56,20 @@ public:
         }
     }
 };
+
+
+int main(){
+
+    MinStack m; 
+    m.push(8); 
+    m.push(2); 
+    m.push(3); 
+    m.push(4); 
+    m.push(2); 
+    m.pop(); 
+    m.pop(); 
+
+    cout<<m.getMin()<<endl;
+
+    return 0; 
+}
