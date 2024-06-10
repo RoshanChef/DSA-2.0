@@ -5,7 +5,7 @@ class MinStack{
     stack<int> s;
 public:
     int getMin(){
-     if(s.size() == 0)
+     if(s.empty())
          return -1;
      return minEle;
  }
@@ -33,7 +33,7 @@ public:
 
 void push(int x)
 {
- if(s.size() == 0)
+ if(s.empty())
  {
      s.push(x);
      minEle = x;
