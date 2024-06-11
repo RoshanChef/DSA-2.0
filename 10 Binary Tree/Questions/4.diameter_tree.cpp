@@ -38,38 +38,40 @@ public:
     }
 };
 
-// o(n)
-pair<int, int> dia(Node *&root)
-{
-    if (root == 0)
-    {
-        pair<int, int> zero = make_pair(0, 0);
-        return zero;
+// O(N)
+// dia , height
+pair<int , int> dia(TreeNode* root){
+    if(root == 0){
+        return  {0,0};  
     }
+    //left
+    pair<int,int> left = dia(root->left);
+    //right
+    pair<int,int> right = dia(root->right);
+        
 
-    // left
-    pair<int, int> left = dia(root->left);
-    // right
-    pair<int, int> right = dia(root->right);
+    //diameter
+    int op1 = left.first; 
+    int op2 = right.first;
+    int op3 = left.second + right.second; 
 
-    int a = left.first;
-    int b = right.first;
-    int c = left.second + right.second + 1;
+    //height
+    int ans_h = max(left.second , right.second) + 1;
 
-    pair<int, int> ans;
+    pair<int,int> ans; 
+    ans.first = max(op3 ,max(op1,op2)); 
+    ans.second = ans_h; 
 
-    ans.first = max(a, max(b, c));
-    ans.second = max(left.second, right.second) + 1;
-    return ans;
+    return ans;      
 }
-int diameter(Node *root)
-{
-    pair<int, int> res;
-    res = dia(root);
+    
+int diameterOfBinaryTree(TreeNode* root) {
+    pair<int,int> res; 
+    res = dia(root); 
     return res.first;
 }
 
-// o(n2)
+// O(N*N)
 int h(TreeNode<int> *root)
 {
     if (root == 0)
