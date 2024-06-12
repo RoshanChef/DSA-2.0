@@ -76,6 +76,7 @@ void level_order(node *root)
         }
     }
 }
+
 node *mirror(node *&root)
 {
     if (root == 0)
@@ -90,6 +91,7 @@ node *mirror(node *&root)
     root->right = mirror(temp);
     return root;
 }
+
 int main()
 {
     node *root = 0;

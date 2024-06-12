@@ -15,6 +15,7 @@ public:
         this->left = 0;
     }
 };
+
 void levelBuild(node *&root)
 {
     queue<node *> que;
@@ -28,14 +29,14 @@ void levelBuild(node *&root)
         node *temp = que.front();
         que.pop();
 
-        cout << "enter data for left of " << temp->data << endl;
+        cout << "enter data for left of " << temp->val << endl;
         cin >> data;
         if (data != -1)
         {
             temp->left = new node(data);
             que.push(temp->left);
         }
-        cout << "enter the data for right of " << temp->data << endl;
+        cout << "enter the data for right of " << temp->val << endl;
         cin >> data;
         if (data != -1)
         {
@@ -44,6 +45,7 @@ void levelBuild(node *&root)
         }
     }
 }
+
 void solve(node *root, vector<int> &ans, int lv = 0)
 {
     if (root == 0)
