@@ -1,14 +1,14 @@
 #include <bits/stdc++.h>
 using namespace std;
-
 class node
 {
+
 public:
     int data;
     node *right;
     node *left;
 
-    node(int data)
+    node(int val)
     {
         this->data = data;
         this->right = 0;
@@ -16,36 +16,7 @@ public:
     }
 };
 
-void levelBuild(node *&root)
-{
-    queue<node *> que;
-    cout << "enter root element" << endl;
-    int data;
-    cin >> data;
-    root = new node(data);
-    que.push(root);
-    while (!que.empty())
-    {
-        node *temp = que.front();
-        que.pop();
-
-        cout << "enter data for left of " << temp->data << endl;
-        cin >> data;
-        if (data != -1)
-        {
-            temp->left = new node(data);
-            que.push(temp->left);
-        }
-        cout << "enter the data for right of " << temp->data << endl;
-        cin >> data;
-        if (data != -1)
-        {
-            temp->right = new node(data);
-            que.push(temp->right);
-        }
-    }
-}
-
+// Traversal
 void level_order(node *root)
 {
     queue<node *> q;
@@ -74,4 +45,11 @@ void level_order(node *root)
                 q.push(temp->right);
         }
     }
+}
+
+
+int main()
+{
+
+    return 0;
 }
