@@ -66,6 +66,8 @@ node *insertionBST(node *root, int d)
     }
     return root;
 }
+// Time complexity:  O( logN ) WC : O(N) if node des
+// Space complexity: O( logN )
 
 void takeInput(node *&root)
 {
