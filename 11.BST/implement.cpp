@@ -2,13 +2,12 @@
 using namespace std;
 class node
 {
-
 public:
     int data;
     node *right;
     node *left;
 
-    node(int val)
+    node(int data)
     {
         this->data = data;
         this->right = 0;
@@ -47,9 +46,46 @@ void level_order(node *root)
     }
 }
 
+node *insertionBST(node *root, int d)
+{
+    if (root == 0)
+    {
+        root = new node(d);
+        return root;
+    }
 
+    if (d > root->data)
+    {
+        // right side
+        root->right = insertionBST(root->right, d);
+    }
+    else
+    {
+        // left side
+        root->left = insertionBST(root->left, d);
+    }
+    return root;
+}
+
+void takeInput(node *&root)
+{
+    int data;
+    cin >> data;
+    while (data != -1)
+    {
+        root = insertionBST(root, data);
+        cin >> data;
+    }
+}
 int main()
 {
+
+    node *root = 0;
+
+    cout << "Enter the data " << endl;
+    takeInput(root);
+    cout << "Data is " << endl;
+    level_order(root);
 
     return 0;
 }
