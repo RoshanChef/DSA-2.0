@@ -80,6 +80,63 @@ void takeInput(node *&root)
     }
 }
 
+bool search(node *root, int key)
+{
+    if (root == 0)
+        return 0;
+    if (root->data == key)
+        return 1;
+    if (root->data > key)
+        return search(root->left, key);
+    else
+        return search(root->right, key);
+}
+
+bool Search(node *root, int key)
+{
+    node *temp = root;
+    while (temp != 0)
+    {
+        if (temp->data == key)
+            return 1;
+        if (temp->data > key)
+            temp = temp->left;
+        else
+            temp = temp->right;
+    }
+    return 0;
+}
+// Time complexity:  O(logN)
+// Space complexity: O(1)
+
+int min_(node *root)
+{
+    if (root == 0)
+        return 0;
+    node *temp = root;
+    while (temp->left)
+    {
+        temp = temp->left;
+    }
+    return temp->data;
+}
+// Time complexity:  O(logN)
+// Space complexity: O(1))
+
+int max_(node *root)
+{
+    if (root == 0)
+        return 0;
+    node *temp = root;
+    while (temp->right)
+    {
+        temp = temp->right;
+    }
+    return temp->data;
+}
+// Time complexity:  O(logN)
+// Space complexity: O(1)
+
 int main()
 {
 
