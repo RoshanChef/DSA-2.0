@@ -79,6 +79,31 @@ void takeInput(node *&root)
         cin >> data;
     }
 }
+void inOrder(node* root){
+    if (root == 0)
+    {
+        return; 
+    }
+    inOrder(root->left);
+    cout<<root->data<<" "; 
+    inOrder(root->right);
+}
+void preOrder(node* root){
+    if(root == 0)
+        return; 
+
+    cout<<root->data<<" "; 
+    preOrder(root->left); 
+    preOrder(root->right); 
+}
+void postOrder(node* root){
+    if(root == 0)
+        return; 
+
+    postOrder(root->left); 
+    postOrder(root->right); 
+    cout<<root->data<<" "; 
+}
 int main()
 {
 
@@ -88,6 +113,14 @@ int main()
     takeInput(root);
     cout << "Data is " << endl;
     level_order(root);
+
+    cout<<"Printing .. "<<endl; 
+    cout<<"In_order" <<endl; 
+    inOrder(root); 
+    cout<<"Post_order"<<endl; 
+    postOrder(root); 
+    cout<<"Pre_order"<<endl; 
+    preOrder(root); 
 
     return 0;
 }
