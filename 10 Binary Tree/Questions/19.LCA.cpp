@@ -38,26 +38,29 @@ node *levelb(node *root)
          q.pop();
 
          // left
-         cout << "enter left";
+         cout << "enter left " << temp->val << endl;
          cin >> data;
 
          if (data != -1)
          {
             temp->left = new node(data);
+            q.push(temp->left);
          }
 
          // right
-         cout << "enter right";
+         cout << "enter right " << temp->val << endl;
          cin >> data;
          if (data != -1)
          {
             temp->right = new node(data);
+            q.push(temp->right);
          }
          size--;
       }
    }
    return root;
 }
+
 void level_print(node *root)
 {
    if (root == 0)
@@ -70,6 +73,7 @@ void level_print(node *root)
       while (size)
       {
          node *temp = q.front();
+         cout << temp->val << " ";
          q.pop();
          if (temp->left)
          {
@@ -81,6 +85,7 @@ void level_print(node *root)
          }
          size--;
       }
+      cout << endl;
    }
 }
 int main()
@@ -88,6 +93,7 @@ int main()
 
    node *root = 0;
    root = levelb(root);
+   level_print(root);
 
    cout << "=== end ===" << endl;
 
