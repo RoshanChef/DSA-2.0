@@ -138,7 +138,9 @@ int main()
 	takeInput(root);
 	cout << "Before " << endl;
 	level_order(root);
+
 	deletion(root, 100);
+	
 	cout << "\n\nAfter " << endl;
 	level_order(root);
 

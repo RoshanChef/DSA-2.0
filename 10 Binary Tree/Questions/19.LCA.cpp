@@ -4,17 +4,23 @@ using namespace std;
 class node
 {
 public:
-   int data;
+   int val;
    node *left, *right;
-   node(int data)
+   node()
    {
-      this->data = data;
       this->left = 0;
       this->right = 0;
+      this->val = 0;
+   }
+   node(int val)
+   {
+      this->left = 0;
+      this->right = 0;
+      this->val = val;
    }
 };
 
-node *level(node *root)
+node *levelb(node *root)
 {
    int data;
    cin >> data;
@@ -22,6 +28,7 @@ node *level(node *root)
 
    queue<node *> q;
    q.push(root);
+
    while (!q.empty())
    {
       int size = q.size();
@@ -30,19 +37,21 @@ node *level(node *root)
          node *temp = q.front();
          q.pop();
 
-         cout << "enter data for left of " << temp->data << endl;
+         // left
+         cout << "enter left";
          cin >> data;
+
          if (data != -1)
          {
             temp->left = new node(data);
-            q.push(temp->left);
          }
-         cout << "enter the data for right of " << temp->data << endl;
+
+         // right
+         cout << "enter right";
          cin >> data;
          if (data != -1)
          {
             temp->right = new node(data);
-            q.push(temp->right);
          }
          size--;
       }
@@ -51,9 +60,8 @@ node *level(node *root)
 }
 void level_print(node *root)
 {
-   if (root == nullptr)
+   if (root == 0)
       return;
-
    queue<node *> q;
    q.push(root);
    while (!q.empty())
@@ -63,22 +71,25 @@ void level_print(node *root)
       {
          node *temp = q.front();
          q.pop();
-
-         cout << temp->data << " ";
          if (temp->left)
+         {
             q.push(temp->left);
+         }
          if (temp->right)
+         {
             q.push(temp->right);
+         }
          size--;
       }
-      cout << endl;
    }
 }
 int main()
 {
+
    node *root = 0;
-   root = level(root);
-   level_print(root);
+   root = levelb(root);
+
+   cout << "=== end ===" << endl;
 
    return 0;
 }
