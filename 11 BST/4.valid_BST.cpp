@@ -6,7 +6,12 @@ public:
     int data;
     node *right;
     node *left;
-
+    node()
+    {
+        this->data = 0;
+        this->right = 0;
+        this->left = 0;
+    }
     node(int data)
     {
         this->data = data;
@@ -80,48 +85,19 @@ void takeInput(node *&root)
     }
 }
 
-void inOrder(node* root){
-    if (root == 0)
-    {
-        return; 
-    }
-    inOrder(root->left);
-    cout<<root->data<<" "; 
-    inOrder(root->right);
+bool valid_BST(node* root){
+    if(root->left == 0 && root->right == 0)
+        return 1; 
 }
-void preOrder(node* root){
-    if(root == 0)
-        return; 
 
-    cout<<root->data<<" "; 
-    preOrder(root->left); 
-    preOrder(root->right); 
-}
-void postOrder(node* root){
-    if(root == 0)
-        return; 
-
-    postOrder(root->left); 
-    postOrder(root->right); 
-    cout<<root->data<<" "; 
-}
 int main()
 {
 
-    node *root = 0;
+    node* root = 0; 
+    takeInput(root); 
+    level_order(root); 
 
-    cout << "Enter the data " << endl;
-    takeInput(root);
-    cout << "Data is " << endl;
-    level_order(root);
 
-    cout<<"Printing .. "<<endl; 
-    cout<<"In_order" <<endl; 
-    inOrder(root); 
-    cout<<"Post_order"<<endl; 
-    postOrder(root); 
-    cout<<"Pre_order"<<endl; 
-    preOrder(root); 
-
+    cout << "\n=== end ===";
     return 0;
 }

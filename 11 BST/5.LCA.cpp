@@ -80,48 +80,25 @@ void takeInput(node *&root)
     }
 }
 
-void inOrder(node* root){
+node *lca(node *root, int p, int q)
+{
+
     if (root == 0)
-    {
-        return; 
-    }
-    inOrder(root->left);
-    cout<<root->data<<" "; 
-    inOrder(root->right);
-}
-void preOrder(node* root){
-    if(root == 0)
-        return; 
+        return 0;
 
-    cout<<root->data<<" "; 
-    preOrder(root->left); 
-    preOrder(root->right); 
-}
-void postOrder(node* root){
-    if(root == 0)
-        return; 
+    // case 1
+    if (p < root->data && q < root->data)
+        return root->left;
 
-    postOrder(root->left); 
-    postOrder(root->right); 
-    cout<<root->data<<" "; 
+    // case 2
+    if (p > root->data && q > root->data)
+        return root->right;
+    // case 3 and 4
+    return root;
 }
 int main()
 {
 
-    node *root = 0;
-
-    cout << "Enter the data " << endl;
-    takeInput(root);
-    cout << "Data is " << endl;
-    level_order(root);
-
-    cout<<"Printing .. "<<endl; 
-    cout<<"In_order" <<endl; 
-    inOrder(root); 
-    cout<<"Post_order"<<endl; 
-    postOrder(root); 
-    cout<<"Pre_order"<<endl; 
-    preOrder(root); 
-
+    cout << "\n=== end ===";
     return 0;
 }
