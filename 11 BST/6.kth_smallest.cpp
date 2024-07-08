@@ -1,17 +1,20 @@
 #include <bits/stdc++.h>
 using namespace std;
+
 class node
 {
 public:
-    int data;
-    node *right;
-    node *left;
-
-    node(int data)
+    int val;
+    node *left, *right;
+    node()
     {
-        this->data = data;
-        this->right = 0;
-        this->left = 0;
+        this->val = 0;
+        this->left = 0, this->right = 0;
+    }
+    node(int val)
+    {
+        this->val = val;
+        this->left = 0, this->right = 0;
     }
 };
 
@@ -44,7 +47,7 @@ node *insertionBST(node *root, int d)
         return root;
     }
 
-    if (d > root->data)
+    if (d > root->val)
     {
         // right side
         root->right = insertionBST(root->right, d);
@@ -70,54 +73,26 @@ void takeInput(node *&root)
     }
 }
 
-void inOrder(node *root)
+int kthSmallest(node *root, int &k)
 {
     if (root == 0)
-    {
-        return;
-    }
-    inOrder(root->left);
-    cout << root->data << " ";
-    inOrder(root->right);
-}
-void preOrder(node *root)
-{
-    if (root == 0)
-        return;
+        return -1;
 
-    cout << root->data << " ";
-    preOrder(root->left);
-    preOrder(root->right);
-}
-void postOrder(node *root)
-{
-    if (root == 0)
-        return;
+    int left = kthSmallest(root->left, k);
 
-    postOrder(root->left);
-    postOrder(root->right);
-    cout << root->data << " ";
+    k--;
+    if (k == 0)
+        return root->val;
+
+    if (k < 0)
+        return left;
+
+    int right = kthSmallest(root->right, k);
+    return right;
 }
 int main()
 {
 
-    node *root = 0;
-
-    cout << "Enter the data " << endl;
-    takeInput(root);
-    cout << "Data is " << endl;
-    level_order(root);
-
-    cout << "Printing .. " << endl;
-    cout << "In_order" << endl;
-    inOrder(root);
-    cout << endl
-         << "Post_order" << endl;
-    postOrder(root);
-
-    cout << endl
-         << "Pre_order" << endl;
-    preOrder(root);
-
+    cout << "\n=== end ===";
     return 0;
 }
