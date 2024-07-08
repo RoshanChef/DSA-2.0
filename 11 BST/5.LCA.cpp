@@ -93,6 +93,7 @@ node *lca(node *root, int p, int q)
     // case 2
     if (p > root->data && q > root->data)
         return root->right;
+        
     // case 3 and 4
     return root;
 }
