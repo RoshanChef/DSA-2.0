@@ -29,15 +29,15 @@ void level_order(node *root)
         while (size)
         {
             node *temp = q.front();
+            cout << temp->val << " ";
             q.pop();
-            cout<<temp->val<<" "; 
             if (temp->left)
                 q.push(temp->left);
             if (temp->right)
                 q.push(temp->right);
             size--;
         }
-        cout<<endl;
+        cout << endl;
     }
 }
 
@@ -75,26 +75,67 @@ void takeInput(node *&root)
     }
 }
 
-int kthSmallest(node *root, int &k)
+void convertSortedDLL(node *root, node *&head)
 {
     if (root == 0)
-        return -1;
+        return;
+    // right subTree
+    convertSortedDLL(root->right, head);
 
-    int left = kthSmallest(root->left, k);
+    // set root
+    root->right = head;
+    // set head
+    if (head)
+        head->left = root;
+    // change head
+    head = root;
 
-    k--;
-    if (k == 0)
-        return root->val;
-
-    if (k < 0)
-        return left;
-
-    int right = kthSmallest(root->right, k);
-    return right;
+    // same for left subTree
+    convertSortedDLL(root->left, head);
 }
+void print(node *head)
+{
+    cout << endl
+         << "sorted list is " << endl;
+    while (head)
+    {
+        cout << head->val << " ";
+        head = head->right;
+    }
+}
+
+node *convertBST(node *&head, int n)
+{
+    if (n <= 0 || head == 0)
+        return 0;
+
+    node *left = convertBST(head, n / 2);
+
+    node *root = head;
+    root->left = left;
+    head = head->right;
+
+    // same for right
+    root->right = convertBST(head, n - 1 - n / 2);
+
+    return root;
+}
+
 int main()
 {
+    node *root = 0;
+    takeInput(root);
+    level_order(root);
 
-    cout << "\n=== end ===";
+    node *head = 0;
+    convertSortedDLL(root, head);
+    print(head);
+
+    cout << "\n\nTree now " << endl;
+    node *r = convertBST(head, 9);
+    level_order(r);
+
+    cout << "\n === end === " << endl;
+
     return 0;
 }

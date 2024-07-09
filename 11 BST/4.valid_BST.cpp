@@ -85,18 +85,30 @@ void takeInput(node *&root)
     }
 }
 
-bool valid_BST(node* root){
-    if(root->left == 0 && root->right == 0)
-        return 1; 
+bool solve(node *root, int lb, int ub)
+{
+    if (root == 0 || root->left == 0 && root->right == 0)
+        return 1;
+    if(lb<= root->data && root->data<= ub){
+        return solve(root->left , lb , root->data) && solve(root->right , root->data , ub); 
+    }
+    return 0; 
+}
+bool valid_BST(node *root)
+{
+    if (root->left == 0 && root->right == 0)
+        return 1;
+
+    int lb = INT_MIN, ub = INT_MAX;
+    return solve(root, lb, ub);
 }
 
 int main()
 {
 
-    node* root = 0; 
-    takeInput(root); 
-    level_order(root); 
-
+    node *root = 0;
+    takeInput(root);
+    level_order(root);
 
     cout << "\n=== end ===";
     return 0;
