@@ -89,7 +89,7 @@ bool solve(node *root, int lb, int ub)
 {
     if (root == 0 || root->left == 0 && root->right == 0)
         return 1;
-    if(lb<= root->data && root->data<= ub){
+    if(lb < root->data && root->data <= ub){
         return solve(root->left , lb , root->data) && solve(root->right , root->data , ub); 
     }
     return 0; 
