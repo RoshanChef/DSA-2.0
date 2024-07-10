@@ -44,5 +44,15 @@ int main()
     }
     cout << endl;
 
+    multiset<int> mset; 
+    mset.insert(10); 
+    mset.insert(13); 
+    mset.insert(13); 
+    mset.insert(1); 
+
+    for(auto val:mset){
+        cout<<val<< " ";
+    }
+
     return 0;
 }
