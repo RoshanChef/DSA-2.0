@@ -6,10 +6,12 @@ class Heap
 public:
     int arr[101];
     int size;
+
     Heap()
     {
         size = 0;
     }
+
     void insert(int data)
     {
         size++;
@@ -30,6 +32,43 @@ public:
             else
                 break;
         }
+    }
+
+    int deletion()
+    {
+        // remove last element and replace with root
+        int ans = arr[1];
+        swap(arr[1], arr[size]);
+        size--;
+
+        // verify the heap property
+        int index = 1;
+        while (index <= size)
+        {
+            int left = 2 * index;
+            int right = 2 * index + 1;
+
+            int largest = index;
+
+            if (left < size && arr[largest] < arr[left])
+            {
+                largest = left;
+            }
+            if (right < size && arr[largest] < arr[right])
+            {
+                largest = right;
+            }
+            if (arr[largest] == arr[index])
+            {
+                break;
+            }
+            else
+            {
+                swap(arr[largest], arr[index]);
+                index = largest;
+            }
+        }
+        return ans;
     }
 };
 
@@ -55,12 +94,19 @@ int main()
     cout << endl;
     h.insert(110);
 
-    cout << "After Printing ... " << endl;
+    cout << "\n\nAfter Printing .... " << endl;
     for (int i = 0; i <= h.size; i++)
     {
         cout << h.arr[i] << " ";
     }
     cout << endl;
+    cout << h.deletion() << endl;
+
+    cout << "\n\nAfter Printing .... " << endl;
+    for (int i = 0; i <= h.size; i++)
+    {
+        cout << h.arr[i] << " ";
+    }
 
     cout << " \n=== end ===";
     return 0;
