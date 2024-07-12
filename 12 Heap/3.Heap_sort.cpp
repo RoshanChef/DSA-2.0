@@ -1,14 +1,5 @@
 #include <iostream>
-#include <cstdlib>
 using namespace std;
-
-/*
-
-Heapify
-Build_heap
-Heap sort
-
-*/
 
 void heapify(int arr[], int n, int index)
 {
@@ -28,15 +19,6 @@ void heapify(int arr[], int n, int index)
     }
 }
 
-// given array convert into heap
-void buildHeap(int arr[], int n)
-{
-    for (int i = n / 2; i > 0; i--)
-    {
-        heapify(arr, n, i);
-    }
-}
-
 void heapsort(int arr[], int n)
 {
     while (n != 1)
@@ -47,41 +29,21 @@ void heapsort(int arr[], int n)
 }
 int main()
 {
-    int arr[] = {-1, 100, 20, 60, 50, 65, 62, 55, 40, 30, 10, 15};
-
+    int arr[] = {-1, 100, 65, 62, 50, 60, 55, 40, 30, 10, 15};
     int len = sizeof(arr) / sizeof(int);
-    cout << "Before Printing ... " << endl;
+    cout << "Before Sorting ... " << endl;
 
     for (int i = 0; i < len; i++)
     {
         cout << arr[i] << " ";
     }
-
-    heapify(arr, len, 2);
-    heapify(arr, len, 3);
-    
-    cout << "\n\nAfter Printing ... " << endl;
+    cout << "\n\n";
+    heapsort(arr, len - 1);
+    cout << "After Sorting ... " << endl;
     for (int i = 0; i < len; i++)
     {
         cout << arr[i] << " ";
     }
-    cout <<endl;
-    heapsort(arr, len-1);
-    for (int i = 0; i < len; i++)
-    {
-        cout << arr[i] << " ";
-    }
-
-    // int vec[] = {-1, 10, 12, 13, 14, 15};
-    // len = sizeof(vec) / sizeof(int);
-
-    // buildHeap(vec, len);
-
-    // cout << "\n\nAfter Printing ... " << endl;
-    // for (int i = 0; i < len; i++)
-    // {
-    //     cout << vec[i] << " ";
-    // }
 
     cout << " \n=== end ===";
     return 0;
