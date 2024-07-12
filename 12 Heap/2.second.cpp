@@ -59,14 +59,14 @@ int main()
 
     heapify(arr, len, 2);
     heapify(arr, len, 3);
-    
+
     cout << "\n\nAfter Printing ... " << endl;
     for (int i = 0; i < len; i++)
     {
         cout << arr[i] << " ";
     }
-    cout <<endl;
-    heapsort(arr, len-1);
+    cout << endl;
+    heapsort(arr, len - 1);
     for (int i = 0; i < len; i++)
     {
         cout << arr[i] << " ";
