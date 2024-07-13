@@ -10,7 +10,7 @@ int kthSmallest(int ar[] , int k , int n){
 
 	for (int i = k; i < n; ++i)
 	{
-		if (q.top()>ar[k])		
+		if (q.top()>ar[i])		
 		{
 			q.pop();
 			q.push(ar[i]); 
@@ -40,8 +40,8 @@ int main()
 	int  arr[] = {7, 10, 4, 3, 20, 15}, k = 3; 
 	int len = sizeof(arr)/sizeof(int); 
 
-	cout<<kthSmallest(arr,k , len) <<endl; 
 	cout<<kthGretest(arr , k , len) <<endl; 
+	cout<<kthSmallest(arr,k , len) <<endl; 
 
 	cout<<"\n\n=== end ===" <<endl; 
 	return 0;
